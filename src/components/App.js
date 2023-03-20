@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from './Header/Header';
-import Main from './Main/Main';
-import Footer from './Footer/Footer';
-import ImagePopup from './ImagePopup/ImagePopup';
-import EditProfilePopup from './EditProfilePopup/EditProfilePopup';
-import EditAvatarPopup from './EditAvatarPopup/EditAvatarPopup';
-import AddPlacePopup from './AddPlacePopup/AddPlacePopup';
-import DeletePlacePopup from './DeletePlacePopup/DeletePlacePopup';
+import Header from './Header/Header.js';
+import Main from './Main/Main.js';
+import Footer from './Footer/Footer.js';
+import ImagePopup from './ImagePopup/ImagePopup.js';
+import EditProfilePopup from './EditProfilePopup/EditProfilePopup.js';
+import EditAvatarPopup from './EditAvatarPopup/EditAvatarPopup.js';
+import AddPlacePopup from './AddPlacePopup/AddPlacePopup.js';
+import DeletePlacePopup from './DeletePlacePopup/DeletePlacePopup.js';
 import api from '../utils/Api'
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
+import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
 
 function App() {
   const [userData, setUserData] = React.useState({});
