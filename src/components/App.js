@@ -36,22 +36,18 @@ function App() {
   }, []);
 
   const handleEditAvatarClick = () => {
-    setIsEditAvatarPopupLoading(false);
     setIsEditAvatarPopupOpen(true);
   }
 
   const handleEditProfileClick = () => {
-    setIsEditProfilePopupLoading(false);
     setIsEditProfilePopupOpen(true);
   }
 
-  const handleAddCardClick = () => {
-    setIsAddPlacePopupLoading(false);
+  const handleAddCardClick = () => {;
     setIsAddPlacePopupOpen(true);
   }
 
   const handleDeleteCardClick = (card) => {
-    setIsDeletePopupLoading(false);
     setIsDeletePopupOpen(true);
     setCardToBeDeleted(card);
   }
@@ -92,6 +88,9 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setIsDeletePopupLoading(false);
       });
   }
 
@@ -104,6 +103,9 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setIsEditProfilePopupLoading(false);
       });
   }
 
@@ -116,6 +118,9 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setIsEditAvatarPopupLoading(false);
       });
   }
 
@@ -128,6 +133,9 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setIsAddPlacePopupLoading(false);
       });
   }
 
